@@ -43,6 +43,13 @@ export default {
       console.log("ticketyBoo");
     }
   },
+  mounted: function () {
+    this.$nextTick(function () {
+      this.activeSayingNum = Math.floor(Math.random()* this.sayings.length);
+      // Code that will run only after the
+      // entire view has been rendered
+    })
+  }
 }
 </script>
 
